@@ -69,15 +69,12 @@ if (this.entrega==='demorado'){
   modo(){
   if (this.entrega==='rapido'){
     this.tipo= this.rapido;
-    this.prazo= 'no máximo 3 dias úteis'
   }else{
     if(this.entrega==='demorado'){
       this.tipo= this.demorado;
-      this.prazo= 'no minímo 5 dias úteis'
     }
     else{
       this.tipo= '1' ;
-      this.prazo= 'até 7 dias úteis'
     }
   }
 }

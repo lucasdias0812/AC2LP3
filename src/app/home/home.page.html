@@ -22,7 +22,7 @@
           <ion-select-option value="4">de 1kg até 5kg</ion-select-option>
           <ion-select-option value="6">de 5kg até 10kg</ion-select-option>
           <ion-select-option value="8">de 10kg até 20kg</ion-select-option>
-          <ion-select-option value="10">de 20kg ou mais</ion-select-option>
+          <ion-select-option value="10">de 20kg até 30kg</ion-select-option>
         </ion-select>
       </ion-item>
       <ion-input [readonly]="true" value="Preço {{peso}} reais"></ion-input>
@@ -36,7 +36,7 @@
           <ion-select-option value="7">de 10 até 20 km</ion-select-option>
           <ion-select-option value="9">de 20 até 30 km</ion-select-option>
           <ion-select-option value="11">de 30 até 40 km</ion-select-option>
-          <ion-select-option value="13">de 40 km ou mais</ion-select-option>
+          <ion-select-option value="13">de 40 km até 50km</ion-select-option>
         </ion-select>
       </ion-item>
       <ion-input [readonly]="true" value="Preço {{distancia}} reais"></ion-input>
@@ -44,20 +44,19 @@
 
     <ion-list>
       <ion-segment value="default" (click)="modo()" [(ngModel)]="entrega">
-        <ion-segment-button value="default">
+        <ion-segment-button value="padrao">
           <ion-label>Padrão</ion-label>
         </ion-segment-button>
-        <ion-segment-button value="expresso">
+        <ion-segment-button value="rapido">
           <ion-label>Rapida</ion-label>
         </ion-segment-button>
-        <ion-segment-button value="economico">
+        <ion-segment-button value="demorado">
           <ion-label>Demorada</ion-label>
         </ion-segment-button>
       </ion-segment>
     </ion-list>
   </ion-list>
-  <ion-input [readonly]="true" value="Prazo: {{prazo}} "></ion-input>
-
+  
   <ion-button (click)="verificaSelecionado()">Verificar preço</ion-button>
 
 
